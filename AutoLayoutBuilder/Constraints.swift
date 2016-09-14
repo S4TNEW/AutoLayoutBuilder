@@ -31,7 +31,7 @@ public func ==(lhs: ConstrainableToSize, rhs: CGSize) -> [NSLayoutConstraint] {
 
 // MARK: ==, >=, <= view[.Attribute]
 public protocol ConstrainableToExpression {
-    typealias This
+    associatedtype This
     func constrainToExpression(Expression: This, relation: NSLayoutRelation) -> [NSLayoutConstraint]
 }
 

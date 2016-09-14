@@ -81,7 +81,7 @@ extension VerticalAttribute {
         case .CenterY: return .CenterY
         case .Top: return .Top
         case .Bottom: return .Bottom
-        case .Baseline: return .Baseline
+        case .Baseline: return .LastBaseline
         case .FirstBaseline: return .FirstBaseline
         case .CenterYWithinMargins: return .CenterYWithinMargins
         case .TopMargin: return .TopMargin
