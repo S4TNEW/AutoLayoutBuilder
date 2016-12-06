@@ -21,7 +21,13 @@ open class LayoutRelation {
 
 // MARK: Operators
 
-infix operator ~ { associativity left precedence 100 }
+//infix operator ~ { associativity left precedence 100 }
+
+
+precedencegroup LayoutDirectionPrecedence {
+    associativity: left
+}
+infix operator ~ : LayoutDirectionPrecedence
 
 public func ~(lhs: LayoutDirection, rhs: LayoutRelation) -> [NSLayoutConstraint] {
     return makeLayoutConstraints(lhs, views: rhs.views, margins: rhs.margins)
