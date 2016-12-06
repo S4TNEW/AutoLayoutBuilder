@@ -1,6 +1,6 @@
 import UIKit
 
-public class LayoutGuideExpression {
+open class LayoutGuideExpression {
 
     let layoutGuide: UILayoutSupport
     let attribute: VerticalAttribute

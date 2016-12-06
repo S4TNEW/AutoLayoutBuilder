@@ -7,10 +7,10 @@ extension NSLayoutConstraint {
     }
 }
 
-public func activate(constraints: [NSLayoutConstraint]) {
+public func activate(_ constraints: [NSLayoutConstraint]) {
 
     for constraint in constraints {
-        constraint.active = true
+        constraint.isActive = true
     }
 }
 

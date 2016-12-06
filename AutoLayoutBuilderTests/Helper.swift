@@ -2,7 +2,7 @@ import UIKit
 
 extension NSLayoutConstraint {
 
-    public override func isEqual(object: AnyObject?) -> Bool {
+    open override func isEqual(_ object: Any?) -> Bool {
 
         if let rhs = object as? NSLayoutConstraint {
             var isEqual = true
