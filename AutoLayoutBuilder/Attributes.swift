@@ -3,57 +3,57 @@ import UIKit
 // MARK: Horizontal
 public enum HorizontalAttribute {
 
-    case CenterX
-    case Left
-    case Right
-    case Leading
-    case Trailing
+    case centerX
+    case left
+    case right
+    case leading
+    case trailing
 
-    case CenterXWithinMargins
-    case LeftMargin
-    case RightMargin
-    case LeadingMargin
-    case TrailingMargin
+    case centerXWithinMargins
+    case leftMargin
+    case rightMargin
+    case leadingMargin
+    case trailingMargin
 }
 
 // MARK: Vertical
 public enum VerticalAttribute {
 
-    case CenterY
-    case Top
-    case Bottom
-    case Baseline
-    case FirstBaseline
+    case centerY
+    case top
+    case bottom
+    case baseline
+    case firstBaseline
 
-    case CenterYWithinMargins
-    case TopMargin
-    case BottomMargin
+    case centerYWithinMargins
+    case topMargin
+    case bottomMargin
 }
 
 // MARK: Center
 public enum CenterAttribute {
-    case Center
+    case center
 }
 
 // MARK: Edge
 public enum EdgeAttribute {
-    case Edges
+    case edges
 }
 
 // MARK: Dimension
 public enum DimensionAttribute {
-    case Width
-    case Height
+    case width
+    case height
 }
 
 // MARK: Size
 public enum SizeAttribute {
-    case Size
+    case size
 }
 
 // MARK: Aspect Ratio
 public enum AspectRatioAttribute {
-    case AspectRatio
+    case aspectRatio
 }
 
 // Extensions:
@@ -61,16 +61,16 @@ public enum AspectRatioAttribute {
 extension HorizontalAttribute {
     var raw: NSLayoutAttribute {
         switch self {
-        case .CenterX: return .CenterX
-        case .Left: return .Left
-        case .Right: return .Right
-        case .Leading: return .Leading
-        case .Trailing: return .Trailing
-        case .CenterXWithinMargins: return .CenterXWithinMargins
-        case .LeftMargin: return .LeftMargin
-        case .RightMargin: return .RightMargin
-        case .LeadingMargin: return .LeadingMargin
-        case .TrailingMargin: return .TrailingMargin
+        case .centerX: return .centerX
+        case .left: return .left
+        case .right: return .right
+        case .leading: return .leading
+        case .trailing: return .trailing
+        case .centerXWithinMargins: return .centerXWithinMargins
+        case .leftMargin: return .leftMargin
+        case .rightMargin: return .rightMargin
+        case .leadingMargin: return .leadingMargin
+        case .trailingMargin: return .trailingMargin
         }
     }
 }
@@ -78,14 +78,14 @@ extension HorizontalAttribute {
 extension VerticalAttribute {
     var raw: NSLayoutAttribute {
         switch self {
-        case .CenterY: return .CenterY
-        case .Top: return .Top
-        case .Bottom: return .Bottom
-        case .Baseline: return .Baseline
-        case .FirstBaseline: return .FirstBaseline
-        case .CenterYWithinMargins: return .CenterYWithinMargins
-        case .TopMargin: return .TopMargin
-        case .BottomMargin: return .BottomMargin
+        case .centerY: return .centerY
+        case .top: return .top
+        case .bottom: return .bottom
+        case .baseline: return .lastBaseline
+        case .firstBaseline: return .firstBaseline
+        case .centerYWithinMargins: return .centerYWithinMargins
+        case .topMargin: return .topMargin
+        case .bottomMargin: return .bottomMargin
         }
     }
 }
@@ -93,8 +93,8 @@ extension VerticalAttribute {
 extension DimensionAttribute {
     var raw: NSLayoutAttribute {
         switch self {
-        case .Width: return .Width
-        case .Height: return .Height
+        case .width: return .width
+        case .height: return .height
         }
     }
 }

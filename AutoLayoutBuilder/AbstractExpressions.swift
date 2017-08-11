@@ -1,8 +1,8 @@
 import UIKit
 
-public class Expression {
+open class Expression {
 
-    public var views: [UIView]
+    open var views: [UIView]
 
     init(views: [UIView]) {
         self.views = views
@@ -11,22 +11,22 @@ public class Expression {
 
 // MARK: Single
 
-public class SingleExpression: Expression {
+open class SingleExpression: Expression {
 
-    public var multiplier: CGFloat = 1
-    public var constant: CGFloat = 0
+    open var multiplier: CGFloat = 1
+    open var constant: CGFloat = 0
 }
 
 extension SingleExpression: ConstantSingleExpression {
 
-    public func setConstant(constant: CGFloat) {
+    public func setConstant(_ constant: CGFloat) {
         self.constant = constant
     }
 }
 
 extension SingleExpression: MultiplierSingleExpression {
 
-    public func setMultiplier(multiplier: CGFloat) {
+    public func setMultiplier(_ multiplier: CGFloat) {
         self.multiplier = multiplier
     }
 }
@@ -34,36 +34,36 @@ extension SingleExpression: MultiplierSingleExpression {
 
 // MARK: Dual
 
-public class DualExpression: Expression {
+open class DualExpression: Expression {
 
-    public var multiplier: CGFloatPair = (1, 1)
-    public var constant: CGFloatPair = (0, 0)
+    open var multiplier: CGFloatPair = (1, 1)
+    open var constant: CGFloatPair = (0, 0)
 }
 
 extension DualExpression: MultiplierSingleExpression {
 
-    public func setMultiplier(multiplier: CGFloat) {
+    public func setMultiplier(_ multiplier: CGFloat) {
         self.multiplier = (multiplier, multiplier)
     }
 }
 
 extension DualExpression: MultiplierTupleExpression {
 
-    public func setMultiplier(multiplier: CGFloatPair) {
+    public func setMultiplier(_ multiplier: CGFloatPair) {
         self.multiplier = multiplier
     }
 }
 
 extension DualExpression: ConstantSingleExpression {
 
-    public func setConstant(constant: CGFloat) {
+    public func setConstant(_ constant: CGFloat) {
         self.constant = (constant, constant)
     }
 }
 
 extension DualExpression: ConstantTupleExpression {
 
-    public func setConstant(constant: CGFloatPair) {
+    public func setConstant(_ constant: CGFloatPair) {
         self.constant = constant
     }
 }

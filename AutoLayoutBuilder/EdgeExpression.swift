@@ -1,6 +1,6 @@
 import UIKit
 
-public class EdgeExpression: Expression {
+open class EdgeExpression: Expression {
 
     var constant: CGFloatQuad = (0, 0, 0, 0)
     var multiplier: CGFloatQuad = (1, 1, 1, 1)
@@ -8,21 +8,21 @@ public class EdgeExpression: Expression {
 
 extension EdgeExpression: MultiplierSingleExpression {
 
-    public func setMultiplier(multiplier: CGFloat) {
+    public func setMultiplier(_ multiplier: CGFloat) {
         self.multiplier = (multiplier, multiplier, multiplier, multiplier)
     }
 }
 
 extension EdgeExpression: ConstantSingleExpression {
 
-    public func setConstant(constant: CGFloat) {
+    public func setConstant(_ constant: CGFloat) {
         self.constant = (-constant, -constant, constant, constant)
     }
 }
 
 extension EdgeExpression: ConstantQuadExpression {
 
-    public func setConstant(constant: CGFloatQuad) {
+    public func setConstant(_ constant: CGFloatQuad) {
         self.constant = constant
     }
 }
@@ -31,12 +31,12 @@ extension EdgeExpression: ConstrainableToExpression {
 
     public typealias This = EdgeExpression
 
-    public func constrainToExpression(expression: EdgeExpression, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
+    public func constrainToExpression(_ expression: EdgeExpression, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
         return views.flatMap { [
-            NSLayoutConstraint($0, .Left, relation, expression.views.first!, .Left, expression.multiplier.1, expression.constant.1),
-            NSLayoutConstraint($0, .Right, relation, expression.views.first!, .Right, expression.multiplier.3, expression.constant.3),
-            NSLayoutConstraint($0, .Top, relation, expression.views.first!, .Top, expression.multiplier.0, expression.constant.0),
-            NSLayoutConstraint($0, .Bottom, relation, expression.views.first!, .Bottom, expression.multiplier.2, expression.constant.2)
+            NSLayoutConstraint($0, .left, relation, expression.views.first!, .left, expression.multiplier.1, expression.constant.1),
+            NSLayoutConstraint($0, .right, relation, expression.views.first!, .right, expression.multiplier.3, expression.constant.3),
+            NSLayoutConstraint($0, .top, relation, expression.views.first!, .top, expression.multiplier.0, expression.constant.0),
+            NSLayoutConstraint($0, .bottom, relation, expression.views.first!, .bottom, expression.multiplier.2, expression.constant.2)
             ]
         }
     }

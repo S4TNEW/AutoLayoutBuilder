@@ -5,24 +5,24 @@ public typealias CGFloatQuad = (CGFloat, CGFloat, CGFloat, CGFloat)
 
 // MARK: == CGFloat
 public protocol ConstrainableToValue {
-    func constrainToValue(value: CGFloat, relation: NSLayoutRelation) -> [NSLayoutConstraint]
+    func constrainToValue(_ value: CGFloat, relation: NSLayoutRelation) -> [NSLayoutConstraint]
 }
 
 public func ==(lhs: ConstrainableToValue, rhs: CGFloat) -> [NSLayoutConstraint] {
-    return lhs.constrainToValue(rhs, relation: .Equal)
+    return lhs.constrainToValue(rhs, relation: .equal)
 }
 
 public func >=(lhs: ConstrainableToValue, rhs: CGFloat) -> [NSLayoutConstraint] {
-    return lhs.constrainToValue(rhs, relation: .GreaterThanOrEqual)
+    return lhs.constrainToValue(rhs, relation: .greaterThanOrEqual)
 }
 
 public func <=(lhs: ConstrainableToValue, rhs: CGFloat) -> [NSLayoutConstraint] {
-    return lhs.constrainToValue(rhs, relation: .LessThanOrEqual)
+    return lhs.constrainToValue(rhs, relation: .lessThanOrEqual)
 }
 
 // MARK: == CGSize
 public protocol ConstrainableToSize {
-    func constrainToSize(size: CGSize) -> [NSLayoutConstraint]
+    func constrainToSize(_ size: CGSize) -> [NSLayoutConstraint]
 }
 
 public func ==(lhs: ConstrainableToSize, rhs: CGSize) -> [NSLayoutConstraint] {
@@ -31,20 +31,20 @@ public func ==(lhs: ConstrainableToSize, rhs: CGSize) -> [NSLayoutConstraint] {
 
 // MARK: ==, >=, <= view[.Attribute]
 public protocol ConstrainableToExpression {
-    typealias This
-    func constrainToExpression(Expression: This, relation: NSLayoutRelation) -> [NSLayoutConstraint]
+    associatedtype This
+    func constrainToExpression(_ Expression: This, relation: NSLayoutRelation) -> [NSLayoutConstraint]
 }
 
-public func ==<T1:ConstrainableToExpression, T2:ConstrainableToExpression where T1.This == T2>(lhs: T1, rhs: T2) -> [NSLayoutConstraint] {
-    return lhs.constrainToExpression(rhs, relation: .Equal)
+public func ==<T1:ConstrainableToExpression, T2:ConstrainableToExpression>(lhs: T1, rhs: T2) -> [NSLayoutConstraint] where T1.This == T2 {
+    return lhs.constrainToExpression(rhs, relation: .equal)
 }
 
-public func >=<T1:ConstrainableToExpression, T2:ConstrainableToExpression where T1.This == T2>(lhs: T1, rhs: T2) -> [NSLayoutConstraint] {
-    return lhs.constrainToExpression(rhs, relation: .GreaterThanOrEqual)
+public func >=<T1:ConstrainableToExpression, T2:ConstrainableToExpression>(lhs: T1, rhs: T2) -> [NSLayoutConstraint] where T1.This == T2 {
+    return lhs.constrainToExpression(rhs, relation: .greaterThanOrEqual)
 }
 
-public func <=<T1:ConstrainableToExpression, T2:ConstrainableToExpression where T1.This == T2>(lhs: T1, rhs: T2) -> [NSLayoutConstraint] {
-    return lhs.constrainToExpression(rhs, relation: .LessThanOrEqual)
+public func <=<T1:ConstrainableToExpression, T2:ConstrainableToExpression>(lhs: T1, rhs: T2) -> [NSLayoutConstraint] where T1.This == T2 {
+    return lhs.constrainToExpression(rhs, relation: .lessThanOrEqual)
 }
 
 //
@@ -53,7 +53,7 @@ public func <=<T1:ConstrainableToExpression, T2:ConstrainableToExpression where 
 
 // MARK: Constant Expression
 public protocol ConstantSingleExpression: class {
-    func setConstant(constant: CGFloat)
+    func setConstant(_ constant: CGFloat)
 }
 
 public func +<T: ConstantSingleExpression>(lhs: T, rhs: CGFloat) -> T {
@@ -68,7 +68,7 @@ public func -<T: ConstantSingleExpression>(lhs: T, rhs: CGFloat) -> T {
 
 // MARK: Constant Tuple Expression
 public protocol ConstantTupleExpression: class {
-    func setConstant(constant: CGFloatPair)
+    func setConstant(_ constant: CGFloatPair)
 }
 
 public func +<T: ConstantTupleExpression>(lhs: T, rhs: CGFloatPair) -> T {
@@ -83,7 +83,7 @@ public func -<T: ConstantTupleExpression>(lhs: T, rhs: CGFloatPair) -> T {
 
 // MARK: Constant Tuple Expression
 public protocol ConstantQuadExpression: class {
-    func setConstant(constant: CGFloatQuad)
+    func setConstant(_ constant: CGFloatQuad)
 }
 
 public func +<T: ConstantQuadExpression>(lhs: T, rhs: CGFloatQuad) -> T {
@@ -98,7 +98,7 @@ public func -<T: ConstantQuadExpression>(lhs: T, rhs: CGFloatQuad) -> T {
 
 // MARK: Multiplier Expression
 public protocol MultiplierSingleExpression {
-    func setMultiplier(multiplier: CGFloat)
+    func setMultiplier(_ multiplier: CGFloat)
 }
 
 public func *<T: MultiplierSingleExpression>(lhs: T, rhs: CGFloat) -> T {
@@ -113,7 +113,7 @@ public func /<T: MultiplierSingleExpression>(lhs: T, rhs: CGFloat) -> T {
 
 // MARK: Multiplier Tuple Expression
 public protocol MultiplierTupleExpression {
-    func setMultiplier(multiplier: CGFloatPair)
+    func setMultiplier(_ multiplier: CGFloatPair)
 }
 
 public func *<T: MultiplierTupleExpression>(lhs: T, rhs: CGFloatPair) -> T {

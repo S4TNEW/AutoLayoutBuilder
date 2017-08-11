@@ -1,11 +1,11 @@
 import UIKit
 
-public class LayoutGroup {
+open class LayoutGroup {
     var constraints = [NSLayoutConstraint]()
 
-    public func activateConstraints(active: Bool) {
+    open func activateConstraints(_ active: Bool) {
         for constraint in constraints {
-            constraint.active = active
+            constraint.isActive = active
         }
     }
 }
@@ -14,7 +14,7 @@ public func += (lhs: LayoutGroup, rhs: [NSLayoutConstraint]) {
     lhs.constraints += rhs
 }
 
-public class Layout {
+open class Layout {
     var keyedBuilders = ["" : LayoutGroup()]
     public init() {}
 }
@@ -25,7 +25,7 @@ public extension Layout {
         return self.key(key)
     }
 
-    public func key(key: String) -> LayoutGroup {
+    public func key(_ key: String) -> LayoutGroup {
         if let builderGroup = keyedBuilders[key] {
             return builderGroup
         }
@@ -39,13 +39,13 @@ public extension Layout {
 
 public extension Layout {
 
-    public func activateConstraints(active: Bool) {
+    public func activateConstraints(_ active: Bool) {
         for builderGroup in keyedBuilders {
             builderGroup.1.activateConstraints(active)
         }
     }
 
-    public func activateConstraintsExcludingKeys(keys: String...) {
+    public func activateConstraintsExcludingKeys(_ keys: String...) {
         for (key, builderGroup) in keyedBuilders {
             if !keys.contains(key) {
                 builderGroup.activateConstraints(true)
@@ -53,7 +53,7 @@ public extension Layout {
         }
     }
 
-    public func activateConstraintsWithKeys(keys: String...) {
+    public func activateConstraintsWithKeys(_ keys: String...) {
         for (key, builderGroup) in keyedBuilders {
             if keys.contains(key) {
                 builderGroup.activateConstraints(true)

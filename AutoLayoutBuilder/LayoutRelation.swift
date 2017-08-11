@@ -2,13 +2,13 @@ import UIKit
 
 public enum LayoutDirection {
 
-    case Horizontal
-    case LeadingToTrailing
+    case horizontal
+    case leadingToTrailing
 
-    case Vertical
+    case vertical
 }
 
-public class LayoutRelation {
+open class LayoutRelation {
 
     var views: [UIView]
     var margins: [CGFloat]
@@ -21,7 +21,13 @@ public class LayoutRelation {
 
 // MARK: Operators
 
-infix operator ~ { associativity left precedence 100 }
+//infix operator ~ { associativity left precedence 100 }
+
+
+precedencegroup LayoutDirectionPrecedence {
+    associativity: left
+}
+infix operator ~ : LayoutDirectionPrecedence
 
 public func ~(lhs: LayoutDirection, rhs: LayoutRelation) -> [NSLayoutConstraint] {
     return makeLayoutConstraints(lhs, views: rhs.views, margins: rhs.margins)
@@ -56,17 +62,17 @@ public func |(lhs: UIView, rhs: CGFloat) -> LayoutRelation {
 
 // MARK: Internal
 
-internal func makeLayoutConstraints(direction: LayoutDirection, views: [UIView], margins: [CGFloat]?) -> [NSLayoutConstraint] {
-    let safeMargins = margins == nil ? Array<CGFloat>(count:views.count, repeatedValue: 0) : margins!
+internal func makeLayoutConstraints(_ direction: LayoutDirection, views: [UIView], margins: [CGFloat]?) -> [NSLayoutConstraint] {
+    let safeMargins = margins == nil ? Array<CGFloat>(repeating: 0, count: views.count) : margins!
     var constraints = [NSLayoutConstraint]()
     for i in 1 ..< views.count {
         switch direction {
-        case .Horizontal:
-            constraints.append(NSLayoutConstraint(views[i], .Left, .Equal, views[i-1], .Right, 1, safeMargins[i-1]))
-        case .LeadingToTrailing:
-            constraints.append(NSLayoutConstraint(views[i], .Leading, .Equal, views[i-1], .Trailing, 1, safeMargins[i-1]))
-        case .Vertical:
-            constraints.append(NSLayoutConstraint(views[i], .Top, .Equal, views[i-1], .Bottom, 1, safeMargins[i-1]))
+        case .horizontal:
+            constraints.append(NSLayoutConstraint(views[i], .left, .equal, views[i-1], .right, 1, safeMargins[i-1]))
+        case .leadingToTrailing:
+            constraints.append(NSLayoutConstraint(views[i], .leading, .equal, views[i-1], .trailing, 1, safeMargins[i-1]))
+        case .vertical:
+            constraints.append(NSLayoutConstraint(views[i], .top, .equal, views[i-1], .bottom, 1, safeMargins[i-1]))
         }
     }
     return constraints

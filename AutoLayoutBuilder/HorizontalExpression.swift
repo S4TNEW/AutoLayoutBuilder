@@ -1,6 +1,6 @@
 import UIKit
 
-public class HorizontalExpression: SingleExpression {
+open class HorizontalExpression: SingleExpression {
 
     let attribute: HorizontalAttribute
 
@@ -14,7 +14,7 @@ extension HorizontalExpression: ConstrainableToExpression {
 
     public typealias This = HorizontalExpression
 
-    public func constrainToExpression(expression: HorizontalExpression, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
+    public func constrainToExpression(_ expression: HorizontalExpression, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
         return views.map {
             NSLayoutConstraint($0, self.attribute.raw, relation, expression.views.first!, expression.attribute.raw, expression.multiplier, expression.constant)
         }

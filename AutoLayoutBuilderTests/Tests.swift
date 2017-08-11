@@ -8,14 +8,14 @@ class Tests: ALBTestCase {
 
     func testEqualHeightsWithTwoViews() {
         let constraints = equalHeights(view1, view2)
-        XCTAssertEqual([NSLayoutConstraint(view1, .Height, .Equal, view2, .Height, 1, 0)], constraints)
+        XCTAssertEqual([NSLayoutConstraint(view1, .height, .equal, view2, .height, 1, 0)], constraints)
     }
 
     func testEqualHeightsWithThreeViews() {
         let constraints = equalHeights(view1, view2, view3)
         XCTAssertEqual([
-            NSLayoutConstraint(view1, .Height, .Equal, view2, .Height, 1, 0),
-            NSLayoutConstraint(view1, .Height, .Equal, view3, .Height, 1, 0)
+            NSLayoutConstraint(view1, .height, .equal, view2, .height, 1, 0),
+            NSLayoutConstraint(view1, .height, .equal, view3, .height, 1, 0)
             ], constraints)
     }
 
@@ -23,14 +23,14 @@ class Tests: ALBTestCase {
 
     func testEqualWidthWithTwoViews() {
         let constraints = equalWidths(view1, view2)
-        XCTAssertEqual([NSLayoutConstraint(view1, .Width, .Equal, view2, .Width, 1, 0)], constraints)
+        XCTAssertEqual([NSLayoutConstraint(view1, .width, .equal, view2, .width, 1, 0)], constraints)
     }
 
     func testEqualWidthsWithThreeViews() {
         let constraints = equalWidths(view1, view2, view3)
         XCTAssertEqual([
-            NSLayoutConstraint(view1, .Width, .Equal, view2, .Width, 1, 0),
-            NSLayoutConstraint(view1, .Width, .Equal, view3, .Width, 1, 0)
+            NSLayoutConstraint(view1, .width, .equal, view2, .width, 1, 0),
+            NSLayoutConstraint(view1, .width, .equal, view3, .width, 1, 0)
             ], constraints)
     }
 }
