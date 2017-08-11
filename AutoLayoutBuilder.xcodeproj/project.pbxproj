@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A07DDED21BEE2ADD006C6C23 /* AutoLayoutBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = A07DDED11BEE2ADD006C6C23 /* AutoLayoutBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A07DDED91BEE2ADD006C6C23 /* AutoLayoutBuilder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A07DDECE1BEE2ADD006C6C23 /* AutoLayoutBuilder.framework */; };
 		A07DDEF91BEE2B01006C6C23 /* AbstractExpressions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDEE81BEE2B01006C6C23 /* AbstractExpressions.swift */; };
 		A07DDEFA1BEE2B01006C6C23 /* AspectRatioExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDEE91BEE2B01006C6C23 /* AspectRatioExpression.swift */; };
 		A07DDEFB1BEE2B01006C6C23 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDEEA1BEE2B01006C6C23 /* Attributes.swift */; };
@@ -26,39 +25,12 @@
 		A07DDF071BEE2B01006C6C23 /* NSLayoutConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDEF61BEE2B01006C6C23 /* NSLayoutConstraintExtensions.swift */; };
 		A07DDF081BEE2B01006C6C23 /* SizeExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDEF71BEE2B01006C6C23 /* SizeExpression.swift */; };
 		A07DDF091BEE2B01006C6C23 /* VerticalExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDEF81BEE2B01006C6C23 /* VerticalExpression.swift */; };
-		A07DDF1E1BEE2B6F006C6C23 /* ALBTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF0F1BEE2B6F006C6C23 /* ALBTestCase.swift */; };
-		A07DDF1F1BEE2B6F006C6C23 /* AspectRatioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF101BEE2B6F006C6C23 /* AspectRatioTests.swift */; };
-		A07DDF201BEE2B6F006C6C23 /* CenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF111BEE2B6F006C6C23 /* CenterTests.swift */; };
-		A07DDF211BEE2B6F006C6C23 /* DimensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF121BEE2B6F006C6C23 /* DimensionTests.swift */; };
-		A07DDF221BEE2B6F006C6C23 /* EdgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF131BEE2B6F006C6C23 /* EdgeTests.swift */; };
-		A07DDF231BEE2B6F006C6C23 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF141BEE2B6F006C6C23 /* Helper.swift */; };
-		A07DDF241BEE2B6F006C6C23 /* HorizontalLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF151BEE2B6F006C6C23 /* HorizontalLayoutTests.swift */; };
-		A07DDF251BEE2B6F006C6C23 /* HorizontalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF161BEE2B6F006C6C23 /* HorizontalTests.swift */; };
-		A07DDF261BEE2B6F006C6C23 /* LayoutGuideRelationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF171BEE2B6F006C6C23 /* LayoutGuideRelationTests.swift */; };
-		A07DDF271BEE2B6F006C6C23 /* LayoutTestSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF181BEE2B6F006C6C23 /* LayoutTestSpecification.swift */; };
-		A07DDF281BEE2B6F006C6C23 /* LeadingToTrailingLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF191BEE2B6F006C6C23 /* LeadingToTrailingLayoutTests.swift */; };
-		A07DDF291BEE2B6F006C6C23 /* SizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF1A1BEE2B6F006C6C23 /* SizeTests.swift */; };
-		A07DDF2A1BEE2B6F006C6C23 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF1B1BEE2B6F006C6C23 /* Tests.swift */; };
-		A07DDF2B1BEE2B6F006C6C23 /* VerticalLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF1C1BEE2B6F006C6C23 /* VerticalLayoutTests.swift */; };
-		A07DDF2C1BEE2B6F006C6C23 /* VerticalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A07DDF1D1BEE2B6F006C6C23 /* VerticalTests.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		A07DDEDA1BEE2ADD006C6C23 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A07DDEC51BEE2ADD006C6C23 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A07DDECD1BEE2ADD006C6C23;
-			remoteInfo = AutoLayoutBuilder;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A07DDECE1BEE2ADD006C6C23 /* AutoLayoutBuilder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AutoLayoutBuilder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07DDED11BEE2ADD006C6C23 /* AutoLayoutBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayoutBuilder.h; sourceTree = "<group>"; };
 		A07DDED31BEE2ADD006C6C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A07DDED81BEE2ADD006C6C23 /* AutoLayoutBuilderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AutoLayoutBuilderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A07DDEDF1BEE2ADD006C6C23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A07DDEE81BEE2B01006C6C23 /* AbstractExpressions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractExpressions.swift; sourceTree = "<group>"; };
 		A07DDEE91BEE2B01006C6C23 /* AspectRatioExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectRatioExpression.swift; sourceTree = "<group>"; };
 		A07DDEEA1BEE2B01006C6C23 /* Attributes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
@@ -76,21 +48,6 @@
 		A07DDEF61BEE2B01006C6C23 /* NSLayoutConstraintExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraintExtensions.swift; sourceTree = "<group>"; };
 		A07DDEF71BEE2B01006C6C23 /* SizeExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeExpression.swift; sourceTree = "<group>"; };
 		A07DDEF81BEE2B01006C6C23 /* VerticalExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalExpression.swift; sourceTree = "<group>"; };
-		A07DDF0F1BEE2B6F006C6C23 /* ALBTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALBTestCase.swift; sourceTree = "<group>"; };
-		A07DDF101BEE2B6F006C6C23 /* AspectRatioTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AspectRatioTests.swift; sourceTree = "<group>"; };
-		A07DDF111BEE2B6F006C6C23 /* CenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterTests.swift; sourceTree = "<group>"; };
-		A07DDF121BEE2B6F006C6C23 /* DimensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimensionTests.swift; sourceTree = "<group>"; };
-		A07DDF131BEE2B6F006C6C23 /* EdgeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EdgeTests.swift; sourceTree = "<group>"; };
-		A07DDF141BEE2B6F006C6C23 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
-		A07DDF151BEE2B6F006C6C23 /* HorizontalLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalLayoutTests.swift; sourceTree = "<group>"; };
-		A07DDF161BEE2B6F006C6C23 /* HorizontalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HorizontalTests.swift; sourceTree = "<group>"; };
-		A07DDF171BEE2B6F006C6C23 /* LayoutGuideRelationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutGuideRelationTests.swift; sourceTree = "<group>"; };
-		A07DDF181BEE2B6F006C6C23 /* LayoutTestSpecification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutTestSpecification.swift; sourceTree = "<group>"; };
-		A07DDF191BEE2B6F006C6C23 /* LeadingToTrailingLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeadingToTrailingLayoutTests.swift; sourceTree = "<group>"; };
-		A07DDF1A1BEE2B6F006C6C23 /* SizeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeTests.swift; sourceTree = "<group>"; };
-		A07DDF1B1BEE2B6F006C6C23 /* Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		A07DDF1C1BEE2B6F006C6C23 /* VerticalLayoutTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalLayoutTests.swift; sourceTree = "<group>"; };
-		A07DDF1D1BEE2B6F006C6C23 /* VerticalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +58,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A07DDED51BEE2ADD006C6C23 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A07DDED91BEE2ADD006C6C23 /* AutoLayoutBuilder.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -116,7 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				A07DDED01BEE2ADD006C6C23 /* AutoLayoutBuilder */,
-				A07DDEDC1BEE2ADD006C6C23 /* AutoLayoutBuilderTests */,
 				A07DDECF1BEE2ADD006C6C23 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				A07DDECE1BEE2ADD006C6C23 /* AutoLayoutBuilder.framework */,
-				A07DDED81BEE2ADD006C6C23 /* AutoLayoutBuilderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,15 +85,6 @@
 				A07DDF0A1BEE2B05006C6C23 /* Resources */,
 			);
 			path = AutoLayoutBuilder;
-			sourceTree = "<group>";
-		};
-		A07DDEDC1BEE2ADD006C6C23 /* AutoLayoutBuilderTests */ = {
-			isa = PBXGroup;
-			children = (
-				A07DDF0D1BEE2B36006C6C23 /* Src */,
-				A07DDF0C1BEE2B2D006C6C23 /* Resources */,
-			);
-			path = AutoLayoutBuilderTests;
 			sourceTree = "<group>";
 		};
 		A07DDF0A1BEE2B05006C6C23 /* Resources */ = {
@@ -177,36 +115,6 @@
 				A07DDEF61BEE2B01006C6C23 /* NSLayoutConstraintExtensions.swift */,
 				A07DDEF71BEE2B01006C6C23 /* SizeExpression.swift */,
 				A07DDEF81BEE2B01006C6C23 /* VerticalExpression.swift */,
-			);
-			name = Src;
-			sourceTree = "<group>";
-		};
-		A07DDF0C1BEE2B2D006C6C23 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				A07DDEDF1BEE2ADD006C6C23 /* Info.plist */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		A07DDF0D1BEE2B36006C6C23 /* Src */ = {
-			isa = PBXGroup;
-			children = (
-				A07DDF0F1BEE2B6F006C6C23 /* ALBTestCase.swift */,
-				A07DDF101BEE2B6F006C6C23 /* AspectRatioTests.swift */,
-				A07DDF111BEE2B6F006C6C23 /* CenterTests.swift */,
-				A07DDF121BEE2B6F006C6C23 /* DimensionTests.swift */,
-				A07DDF131BEE2B6F006C6C23 /* EdgeTests.swift */,
-				A07DDF141BEE2B6F006C6C23 /* Helper.swift */,
-				A07DDF151BEE2B6F006C6C23 /* HorizontalLayoutTests.swift */,
-				A07DDF161BEE2B6F006C6C23 /* HorizontalTests.swift */,
-				A07DDF171BEE2B6F006C6C23 /* LayoutGuideRelationTests.swift */,
-				A07DDF181BEE2B6F006C6C23 /* LayoutTestSpecification.swift */,
-				A07DDF191BEE2B6F006C6C23 /* LeadingToTrailingLayoutTests.swift */,
-				A07DDF1A1BEE2B6F006C6C23 /* SizeTests.swift */,
-				A07DDF1B1BEE2B6F006C6C23 /* Tests.swift */,
-				A07DDF1C1BEE2B6F006C6C23 /* VerticalLayoutTests.swift */,
-				A07DDF1D1BEE2B6F006C6C23 /* VerticalTests.swift */,
 			);
 			name = Src;
 			sourceTree = "<group>";
@@ -243,24 +151,6 @@
 			productReference = A07DDECE1BEE2ADD006C6C23 /* AutoLayoutBuilder.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		A07DDED71BEE2ADD006C6C23 /* AutoLayoutBuilderTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A07DDEE51BEE2ADD006C6C23 /* Build configuration list for PBXNativeTarget "AutoLayoutBuilderTests" */;
-			buildPhases = (
-				A07DDED41BEE2ADD006C6C23 /* Sources */,
-				A07DDED51BEE2ADD006C6C23 /* Frameworks */,
-				A07DDED61BEE2ADD006C6C23 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A07DDEDB1BEE2ADD006C6C23 /* PBXTargetDependency */,
-			);
-			name = AutoLayoutBuilderTests;
-			productName = AutoLayoutBuilderTests;
-			productReference = A07DDED81BEE2ADD006C6C23 /* AutoLayoutBuilderTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -273,11 +163,7 @@
 				TargetAttributes = {
 					A07DDECD1BEE2ADD006C6C23 = {
 						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0810;
-					};
-					A07DDED71BEE2ADD006C6C23 = {
-						CreatedOnToolsVersion = 7.1;
-						LastSwiftMigration = 0810;
+						LastSwiftMigration = 0900;
 					};
 				};
 			};
@@ -294,20 +180,12 @@
 			projectRoot = "";
 			targets = (
 				A07DDECD1BEE2ADD006C6C23 /* AutoLayoutBuilder */,
-				A07DDED71BEE2ADD006C6C23 /* AutoLayoutBuilderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A07DDECC1BEE2ADD006C6C23 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A07DDED61BEE2ADD006C6C23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -341,37 +219,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A07DDED41BEE2ADD006C6C23 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A07DDF241BEE2B6F006C6C23 /* HorizontalLayoutTests.swift in Sources */,
-				A07DDF211BEE2B6F006C6C23 /* DimensionTests.swift in Sources */,
-				A07DDF1E1BEE2B6F006C6C23 /* ALBTestCase.swift in Sources */,
-				A07DDF2B1BEE2B6F006C6C23 /* VerticalLayoutTests.swift in Sources */,
-				A07DDF271BEE2B6F006C6C23 /* LayoutTestSpecification.swift in Sources */,
-				A07DDF1F1BEE2B6F006C6C23 /* AspectRatioTests.swift in Sources */,
-				A07DDF201BEE2B6F006C6C23 /* CenterTests.swift in Sources */,
-				A07DDF261BEE2B6F006C6C23 /* LayoutGuideRelationTests.swift in Sources */,
-				A07DDF251BEE2B6F006C6C23 /* HorizontalTests.swift in Sources */,
-				A07DDF291BEE2B6F006C6C23 /* SizeTests.swift in Sources */,
-				A07DDF281BEE2B6F006C6C23 /* LeadingToTrailingLayoutTests.swift in Sources */,
-				A07DDF2C1BEE2B6F006C6C23 /* VerticalTests.swift in Sources */,
-				A07DDF221BEE2B6F006C6C23 /* EdgeTests.swift in Sources */,
-				A07DDF2A1BEE2B6F006C6C23 /* Tests.swift in Sources */,
-				A07DDF231BEE2B6F006C6C23 /* Helper.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A07DDEDB1BEE2ADD006C6C23 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A07DDECD1BEE2ADD006C6C23 /* AutoLayoutBuilder */;
-			targetProxy = A07DDEDA1BEE2ADD006C6C23 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		A07DDEE01BEE2ADD006C6C23 /* Debug */ = {
@@ -484,7 +332,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -503,33 +352,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.marcb.AutoLayoutBuilder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		A07DDEE61BEE2ADD006C6C23 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = AutoLayoutBuilderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.marcb.AutoLayoutBuilderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		A07DDEE71BEE2ADD006C6C23 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = AutoLayoutBuilderTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = xyz.marcb.AutoLayoutBuilderTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -550,15 +374,6 @@
 			buildConfigurations = (
 				A07DDEE31BEE2ADD006C6C23 /* Debug */,
 				A07DDEE41BEE2ADD006C6C23 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		A07DDEE51BEE2ADD006C6C23 /* Build configuration list for PBXNativeTarget "AutoLayoutBuilderTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A07DDEE61BEE2ADD006C6C23 /* Debug */,
-				A07DDEE71BEE2ADD006C6C23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
