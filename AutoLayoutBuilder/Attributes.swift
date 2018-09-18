@@ -59,7 +59,7 @@ public enum AspectRatioAttribute {
 // Extensions:
 
 extension HorizontalAttribute {
-    var raw: NSLayoutAttribute {
+    var raw: NSLayoutConstraint.Attribute {
         switch self {
         case .centerX: return .centerX
         case .left: return .left
@@ -76,7 +76,7 @@ extension HorizontalAttribute {
 }
 
 extension VerticalAttribute {
-    var raw: NSLayoutAttribute {
+    var raw: NSLayoutConstraint.Attribute {
         switch self {
         case .centerY: return .centerY
         case .top: return .top
@@ -91,7 +91,7 @@ extension VerticalAttribute {
 }
 
 extension DimensionAttribute {
-    var raw: NSLayoutAttribute {
+    var raw: NSLayoutConstraint.Attribute {
         switch self {
         case .width: return .width
         case .height: return .height

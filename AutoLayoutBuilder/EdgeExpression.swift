@@ -31,7 +31,7 @@ extension EdgeExpression: ConstrainableToExpression {
 
     public typealias This = EdgeExpression
 
-    public func constrainToExpression(_ expression: EdgeExpression, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
+    public func constrainToExpression(_ expression: EdgeExpression, relation: NSLayoutConstraint.Relation) -> [NSLayoutConstraint] {
         return views.flatMap { [
             NSLayoutConstraint($0, .left, relation, expression.views.first!, .left, expression.multiplier.1, expression.constant.1),
             NSLayoutConstraint($0, .right, relation, expression.views.first!, .right, expression.multiplier.3, expression.constant.3),

@@ -12,9 +12,9 @@ open class DimensionExpression: SingleExpression {
 
 extension DimensionExpression: ConstrainableToValue {
 
-    public func constrainToValue(_ value: CGFloat, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
+    public func constrainToValue(_ value: CGFloat, relation: NSLayoutConstraint.Relation) -> [NSLayoutConstraint] {
         return views.map {
-            NSLayoutConstraint($0, self.attribute.raw, relation, nil, .notAnAttribute, 1, value)
+            NSLayoutConstraint(item: $0, attribute: self.attribute.raw, relatedBy: relation, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: value)
         }
     }
 }
@@ -23,9 +23,9 @@ extension DimensionExpression: ConstrainableToExpression {
 
     public typealias This = DimensionExpression
 
-    public func constrainToExpression(_ expression: DimensionExpression, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
+    public func constrainToExpression(_ expression: DimensionExpression, relation: NSLayoutConstraint.Relation) -> [NSLayoutConstraint] {
         return views.map {
-            NSLayoutConstraint($0, self.attribute.raw, relation, expression.views.first!, expression.attribute.raw, expression.multiplier, expression.constant)
+            NSLayoutConstraint(item: $0, attribute: self.attribute.raw, relatedBy: relation, toItem: expression.views.first!, attribute: expression.attribute.raw, multiplier: expression.multiplier, constant: expression.constant)
         }
     }
 }
