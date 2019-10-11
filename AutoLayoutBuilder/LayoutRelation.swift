@@ -68,11 +68,11 @@ internal func makeLayoutConstraints(_ direction: LayoutDirection, views: [UIView
     for i in 1 ..< views.count {
         switch direction {
         case .horizontal:
-            constraints.append(NSLayoutConstraint(views[i], .left, .equal, views[i-1], .right, 1, safeMargins[i-1]))
+            constraints.append(NSLayoutConstraint(item: views[i], attribute: .left, relatedBy: .equal, toItem: views[i-1], attribute: .right, multiplier: 1, constant: safeMargins[i-1]))
         case .leadingToTrailing:
-            constraints.append(NSLayoutConstraint(views[i], .leading, .equal, views[i-1], .trailing, 1, safeMargins[i-1]))
+            constraints.append(NSLayoutConstraint(item: views[i], attribute: .leading, relatedBy: .equal, toItem: views[i-1], attribute: .trailing, multiplier: 1, constant: safeMargins[i-1]))
         case .vertical:
-            constraints.append(NSLayoutConstraint(views[i], .top, .equal, views[i-1], .bottom, 1, safeMargins[i-1]))
+            constraints.append(NSLayoutConstraint(item: views[i], attribute: .top, relatedBy: .equal, toItem: views[i-1], attribute: .bottom, multiplier: 1, constant: safeMargins[i-1]))
         }
     }
     return constraints

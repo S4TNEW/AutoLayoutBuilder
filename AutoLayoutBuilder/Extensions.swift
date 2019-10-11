@@ -62,13 +62,6 @@ public extension Group {
     }
 }
 
-public extension UIViewController {
-
-    public var layoutGuides: (top: LayoutGuide, bottom: LayoutGuide) {
-        return (top: LayoutGuide(layoutGuide: self.topLayoutGuide), bottom: LayoutGuide(layoutGuide: self.bottomLayoutGuide))
-    }
-}
-
 public extension LayoutGuide {
 
     public subscript(attribute: VerticalAttribute) -> LayoutGuideExpression {

@@ -14,9 +14,15 @@ extension VerticalExpression: ConstrainableToExpression {
 
     public typealias This = VerticalExpression
 
-    public func constrainToExpression(_ expression: VerticalExpression, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
+    public func constrainToExpression(_ expression: VerticalExpression, relation: NSLayoutConstraint.Relation) -> [NSLayoutConstraint] {
         return views.map {
-            NSLayoutConstraint($0, self.attribute.raw, relation, expression.views.first!, expression.attribute.raw, expression.multiplier, expression.constant)
+            NSLayoutConstraint(item: $0,
+                               attribute: self.attribute.raw,
+                               relatedBy: relation,
+                               toItem: expression.views.first!,
+                               attribute: expression.attribute.raw,
+                               multiplier: expression.multiplier,
+                               constant: expression.constant)
         }
     }
 }
@@ -37,6 +43,15 @@ public func <=(lhs: VerticalExpression, rhs: LayoutGuideExpression) -> [NSLayout
 
 // MARK: Internal
 
-func makeVerticalPositionRelationConstraints(_ lhs: VerticalExpression, rhs: LayoutGuideExpression, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
-    return lhs.views.map { NSLayoutConstraint($0, lhs.attribute.raw, relation, rhs.layoutGuide, rhs.attribute.raw, 1, rhs.constant) }
+func makeVerticalPositionRelationConstraints(_ lhs: VerticalExpression, rhs: LayoutGuideExpression, relation: NSLayoutConstraint.Relation) -> [NSLayoutConstraint] {
+    return lhs.views.map {
+        NSLayoutConstraint(item: $0,
+                           attribute: lhs.attribute.raw,
+                           relatedBy: relation,
+                           toItem: rhs.layoutGuide,
+                           attribute: rhs.attribute.raw,
+                           multiplier: 1,
+                           constant: rhs.constant)
+
+    }
 }

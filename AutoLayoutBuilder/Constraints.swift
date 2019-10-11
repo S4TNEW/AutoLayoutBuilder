@@ -5,7 +5,7 @@ public typealias CGFloatQuad = (CGFloat, CGFloat, CGFloat, CGFloat)
 
 // MARK: == CGFloat
 public protocol ConstrainableToValue {
-    func constrainToValue(_ value: CGFloat, relation: NSLayoutRelation) -> [NSLayoutConstraint]
+    func constrainToValue(_ value: CGFloat, relation: NSLayoutConstraint.Relation) -> [NSLayoutConstraint]
 }
 
 public func ==(lhs: ConstrainableToValue, rhs: CGFloat) -> [NSLayoutConstraint] {
@@ -32,7 +32,7 @@ public func ==(lhs: ConstrainableToSize, rhs: CGSize) -> [NSLayoutConstraint] {
 // MARK: ==, >=, <= view[.Attribute]
 public protocol ConstrainableToExpression {
     associatedtype This
-    func constrainToExpression(_ Expression: This, relation: NSLayoutRelation) -> [NSLayoutConstraint]
+    func constrainToExpression(_ Expression: This, relation: NSLayoutConstraint.Relation) -> [NSLayoutConstraint]
 }
 
 public func ==<T1:ConstrainableToExpression, T2:ConstrainableToExpression>(lhs: T1, rhs: T2) -> [NSLayoutConstraint] where T1.This == T2 {

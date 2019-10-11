@@ -8,7 +8,7 @@ public func equalHeights(_ views: [UIView]) -> [NSLayoutConstraint] {
     let firstView = views.first!
     var constraints = [NSLayoutConstraint]()
     for view in views[1..<views.count] {
-        constraints.append(NSLayoutConstraint(firstView, .height, .equal, view, .height, 1, 0))
+        constraints.append(NSLayoutConstraint(item: firstView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1, constant: 0))
     }
     return constraints
 }
@@ -21,7 +21,7 @@ public func equalWidths(_ views: [UIView]) -> [NSLayoutConstraint] {
     let firstView = views.first!
     var constraints = [NSLayoutConstraint]()
     for view in views[1..<views.count] {
-        constraints.append(NSLayoutConstraint(firstView, .width, .equal, view, .width, 1, 0))
+        constraints.append(NSLayoutConstraint(item: firstView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1, constant: 0))
     }
     return constraints
 }

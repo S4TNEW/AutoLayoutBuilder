@@ -14,9 +14,15 @@ extension HorizontalExpression: ConstrainableToExpression {
 
     public typealias This = HorizontalExpression
 
-    public func constrainToExpression(_ expression: HorizontalExpression, relation: NSLayoutRelation) -> [NSLayoutConstraint] {
+    public func constrainToExpression(_ expression: HorizontalExpression, relation: NSLayoutConstraint.Relation) -> [NSLayoutConstraint] {
         return views.map {
-            NSLayoutConstraint($0, self.attribute.raw, relation, expression.views.first!, expression.attribute.raw, expression.multiplier, expression.constant)
+            NSLayoutConstraint(item: $0,
+                               attribute: self.attribute.raw,
+                               relatedBy: relation,
+                               toItem: expression.views.first!,
+                               attribute: expression.attribute.raw,
+                               multiplier: expression.multiplier,
+                               constant: expression.constant)
         }
     }
 }
