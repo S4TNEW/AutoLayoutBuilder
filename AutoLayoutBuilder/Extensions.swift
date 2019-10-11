@@ -64,7 +64,7 @@ public extension Group {
 
 public extension LayoutGuide {
 
-    public subscript(attribute: VerticalAttribute) -> LayoutGuideExpression {
+    subscript(attribute: VerticalAttribute) -> LayoutGuideExpression {
         return LayoutGuideExpression(layoutGuide: layoutGuide, attribute: attribute)
     }
 }

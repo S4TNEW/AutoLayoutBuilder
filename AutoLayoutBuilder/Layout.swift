@@ -25,7 +25,7 @@ public extension Layout {
         return self.key(key)
     }
 
-    public func key(_ key: String) -> LayoutGroup {
+    func key(_ key: String) -> LayoutGroup {
         if let builderGroup = keyedBuilders[key] {
             return builderGroup
         }
@@ -39,13 +39,13 @@ public extension Layout {
 
 public extension Layout {
 
-    public func activateConstraints(_ active: Bool) {
+    func activateConstraints(_ active: Bool) {
         for builderGroup in keyedBuilders {
             builderGroup.1.activateConstraints(active)
         }
     }
 
-    public func activateConstraintsExcludingKeys(_ keys: String...) {
+    func activateConstraintsExcludingKeys(_ keys: String...) {
         for (key, builderGroup) in keyedBuilders {
             if !keys.contains(key) {
                 builderGroup.activateConstraints(true)
@@ -53,7 +53,7 @@ public extension Layout {
         }
     }
 
-    public func activateConstraintsWithKeys(_ keys: String...) {
+    func activateConstraintsWithKeys(_ keys: String...) {
         for (key, builderGroup) in keyedBuilders {
             if keys.contains(key) {
                 builderGroup.activateConstraints(true)
